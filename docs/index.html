@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>유벌 게임</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <p>최고 기록 : <span id="highScore">0</span></p>
+    <p>때린 횟수 : <span id="count">0</span></p>
+    
+
+    <div class="button-group">
+      <button id="saveBtn">저장</button>
+      <button id="loadBtn">불러오기</button>
+    </div>
+    
+
+    <div class="image-box">
+      <img id="gameImage" src="유별.png" alt="유벌 이미지" />
+      <div id="flowerField" class="flower-field"></div> <!-- 🌸 꽃밭 -->
+    </div>
+
+    <div class="timer-container">
+      <img src="세경배경.jpg" id="endIcon" class="timer-icon">
+      <div id="timerBar">
+        <div id="timerFill"></div>
+      </div>
+      <img src="파키소년.png" id="startIcon" class="timer-icon">
+    </div>    
+  </div>
+
+  <script src="script.js"></script>
+  
+  <img src="동근.png" id="jumpscare" alt="동근 점프스케어" />
+  <img src="김윤성.png" id="flyingYoon" alt="김윤성" />
+
+  <audio id="gameOverSound" src="gameover.mp3"></audio>
+
+</body>
+</html>

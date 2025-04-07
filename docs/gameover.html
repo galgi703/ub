@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>게임 오버</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: rgb(255, 150, 150);
+    }
+
+    img {
+      height: 500px;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 5px 0;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: #ff3a3a;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #ad2121;
+    }
+  </style>
+</head>
+<body>
+  <img src="gameover.png" alt="게임 오버">
+  <h1>게임 오버!</h1>
+  <p>최고 기록: <span id="highScore">0</span></p>
+  <p>때린 횟수: <span id="finalCount">0</span></p>
+
+  <button onclick="location.href='index.html'">다시 하기</button>
+
+  <script>
+    const count = localStorage.getItem("count");
+    const highScore = localStorage.getItem("highScore");
+
+    document.getElementById("finalCount").textContent = count !== null ? count : 0;
+    document.getElementById("highScore").textContent = highScore !== null ? highScore : 0;
+
+    // count만 삭제, savedCount는 유지!
+    setTimeout(() => {
+      localStorage.removeItem("count");
+    }, 500);
+  </script>
+</body>
+</html>

@@ -12,7 +12,7 @@ body {
 .container {
   max-width: 500px;
   width: 100%;
-  margin-top: 50px; /* 여기에 이 줄 추가 */
+  margin-top: 50px;
 }
 
 .image-box {
@@ -28,9 +28,9 @@ body {
   transition: transform 0.2s ease-in-out;
   user-select: none;
   -webkit-user-drag: none;
-  position: relative; /* ★ 이거 추가해 */
+  position: relative;
   top: 80px;
-  z-index: 1; /* 🐝 유벌이는 위에 */
+  z-index: 1;
   position: relative;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 #startIcon {
-  width: 230px; /* 파키소년: 안보여서 크기 키움 */
+  width: 230px;
   left: 0;
   transform: translateX(0);
   z-index: 1000;
@@ -171,3 +171,4 @@ body {
     transform: translate(0vw, 0vh) rotate(360deg);
   }
 }
+

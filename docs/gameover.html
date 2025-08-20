@@ -59,10 +59,10 @@
     document.getElementById("finalCount").textContent = count !== null ? count : 0;
     document.getElementById("highScore").textContent = highScore !== null ? highScore : 0;
 
-    // count만 삭제, savedCount는 유지!
     setTimeout(() => {
       localStorage.removeItem("count");
     }, 500);
   </script>
 </body>
 </html>
+
